@@ -56,17 +56,6 @@ p {
     }
 }
 
-@keyframes slide {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 header {
     @extend %flex-container;
     box-shadow: 0px 2px 0px $text;
@@ -218,7 +207,6 @@ main {
 
     .authors-block {
         .container {
-            animation: slide .3s ease-in-out;
             @extend %flex-container;
             gap: 15px;
             section {
