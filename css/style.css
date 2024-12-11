@@ -43,6 +43,16 @@ h2 {
     opacity: 1;
   }
 }
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 header {
   box-shadow: 0px 2px 0px rgb(215, 239, 242);
 }
@@ -85,9 +95,9 @@ header #burger-check {
   display: none;
 }
 header .burger-menu {
+  display: none;
   animation: fade 0.3s ease-in-out;
   top: 8%;
-  display: none;
   position: fixed;
   z-index: 1;
 }
@@ -173,6 +183,7 @@ main .about-block .gray {
   color: rgb(200, 200, 200);
 }
 main .authors-block .container {
+  animation: slide 0.3s ease-in-out;
   gap: 15px;
 }
 main .authors-block .container section {
@@ -217,7 +228,7 @@ footer {
   height: 100px;
 }
 
-@media ((min-width: 380px) and (max-width: 1360px)) {
+@media ((min-width: 380px) and (max-width: 1280px)) {
   main .first-block {
     flex-flow: column wrap;
     padding: 0;

@@ -56,6 +56,17 @@ p {
     }
 }
 
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 header {
     @extend %flex-container;
     box-shadow: 0px 2px 0px $text;
@@ -101,9 +112,9 @@ header {
     }
 
     .burger-menu {
+        display: none;
         animation: fade .3s ease-in-out;
         top: 8%;
-        display: none;
         position: fixed;
         z-index: 1;
             li {
@@ -207,6 +218,7 @@ main {
 
     .authors-block {
         .container {
+            animation: slide .3s ease-in-out;
             @extend %flex-container;
             gap: 15px;
             section {
@@ -262,7 +274,8 @@ footer {
     align-content: center;
     height: 100px;
 }
-@media ((min-width: 380px) and (max-width: 1360px)) {
+
+@media ((min-width: 380px) and (max-width: 1280px)) {
 
     main .first-block {
         flex-flow: column wrap;
