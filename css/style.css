@@ -16,7 +16,7 @@ header nav ul li a, p {
   color: rgb(215, 239, 242);
 }
 
-h2, h1 {
+header .burger-menu li a, h2, h1 {
   font-family: Montserrat;
   font-weight: 1000;
   font-size: 48px;
@@ -35,6 +35,14 @@ h2 {
   font-size: 24px;
 }
 
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 header {
   box-shadow: 0px 2px 0px rgb(215, 239, 242);
 }
@@ -74,15 +82,46 @@ header nav ul li a:active {
   transform: scale(0.9);
 }
 header #burger-check {
+  display: none;
+}
+header .burger-menu {
+  animation: fade 0.3s ease-in-out;
+  top: 8%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+}
+header .burger-menu li {
+  list-style: none;
+}
+header .burger-menu li a {
+  font-size: 24px;
+  text-decoration: none;
+  color: rgb(215, 239, 242);
+  transition: all 0.2s ease-in-out;
+}
+header .burger-menu li a:hover {
+  opacity: 0.7;
+}
+header .burger-menu::before {
+  top: 0%;
+  left: 0%;
+  position: fixed;
+  z-index: -1;
   display: block;
+  content: " ";
+  height: 100vh;
+  width: 100vw;
+  background: rgb(28, 28, 28);
+  opacity: 0.9;
 }
 header .burger-button {
   align-self: center;
   right: 10%;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   position: fixed;
-  color: rgb(28, 28, 28);
+  color: rgb(215, 239, 242);
   font-size: 3em;
   font-weight: 1000;
 }
@@ -97,16 +136,8 @@ header .burger-button::before {
   background: linear-gradient(120deg, #4776e6, #8e54e9);
   border-radius: 15px;
 }
-header #burger-check:checked + nav {
-  display: fixed;
-}
-header .burger-menu::before {
-  height: 100%;
-  width: 100%;
-  content: " ";
-  z-index: -1;
-  display: fixed;
-  background: #000;
+header #burger-check:checked + .burger-menu {
+  display: block;
 }
 
 main .first-block {
@@ -196,8 +227,11 @@ footer {
     width: 80%;
     margin: 10px;
   }
-  nav {
+  .horizontal-menu {
     display: none;
+  }
+  .first-block {
+    padding: 0;
   }
   .burger-button {
     display: inline-block;
