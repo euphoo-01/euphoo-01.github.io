@@ -88,6 +88,44 @@ header {
         }
     }
 
+    #burger-check {
+        display: block;
+    }
+
+    .burger-button {
+        align-self: center;
+        right: 10%;
+        z-index: 1;
+        display: flex;
+        position: fixed;
+        color: $black;
+        font-size: 3em;
+        font-weight: 1000;
+        &::before {
+            z-index: -1;
+            position: absolute;
+            left: -11px;
+            top: 3px;
+            height: 50px;
+            width: 50px;
+            content: " ";
+            background: $accent;
+            border-radius: 15px;
+        }
+    }
+
+    #burger-check:checked + nav {
+        display: fixed;
+
+    }
+    .burger-menu::before {
+        height: 100%;
+        width: 100%;
+        content: " ";
+        z-index: -1;
+        display: fixed;
+        background: #000;
+    }
 }
 
 
@@ -203,4 +241,7 @@ footer {
         display: none;
     }
 
+    .burger-button {
+        display: inline-block;
+    }
 }

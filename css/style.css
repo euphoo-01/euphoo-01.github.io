@@ -73,6 +73,41 @@ header nav ul li a:hover {
 header nav ul li a:active {
   transform: scale(0.9);
 }
+header #burger-check {
+  display: block;
+}
+header .burger-button {
+  align-self: center;
+  right: 10%;
+  z-index: 1;
+  display: flex;
+  position: fixed;
+  color: rgb(28, 28, 28);
+  font-size: 3em;
+  font-weight: 1000;
+}
+header .burger-button::before {
+  z-index: -1;
+  position: absolute;
+  left: -11px;
+  top: 3px;
+  height: 50px;
+  width: 50px;
+  content: " ";
+  background: linear-gradient(120deg, #4776e6, #8e54e9);
+  border-radius: 15px;
+}
+header #burger-check:checked + nav {
+  display: fixed;
+}
+header .burger-menu::before {
+  height: 100%;
+  width: 100%;
+  content: " ";
+  z-index: -1;
+  display: fixed;
+  background: #000;
+}
 
 main .first-block {
   background: linear-gradient(120deg, #4776e6, #8e54e9);
@@ -163,5 +198,8 @@ footer {
   }
   nav {
     display: none;
+  }
+  .burger-button {
+    display: inline-block;
   }
 }/*# sourceMappingURL=style.css.map */
