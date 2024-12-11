@@ -217,7 +217,7 @@ footer {
   height: 100px;
 }
 
-@media ((min-width: 380px) and (max-width: 1000px)) {
+@media ((min-width: 380px) and (max-width: 1150px)) {
   main .first-block {
     flex-flow: column wrap;
     padding: 0;
@@ -234,6 +234,6 @@ footer {
     padding: 0;
   }
   .burger-button {
-    display: inline-block;
+    display: flex;
   }
 }/*# sourceMappingURL=style.css.map */
