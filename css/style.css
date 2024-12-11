@@ -117,7 +117,7 @@ header .burger-menu::before {
 }
 header .burger-button {
   align-self: center;
-  right: 10%;
+  right: 5%;
   z-index: 2;
   display: none;
   position: fixed;
@@ -230,7 +230,13 @@ footer {
   .horizontal-menu {
     display: none;
   }
+  body {
+    margin-left: 2.5%;
+    width: 95%;
+  }
   .first-block {
+    position: relative;
+    margin: 0;
     padding: 0;
   }
   header .burger-button {
