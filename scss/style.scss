@@ -58,6 +58,11 @@ p {
 
 header {
     @extend %flex-container;
+    background-color: inherit;
+    position: sticky;
+    width: 100%;
+    z-index: 1;
+    top: 0%;
     box-shadow: 0px 2px 0px $text;
     nav {
         margin-left: auto;
@@ -265,6 +270,9 @@ footer {
 
 @media ((min-width: 360px) and (max-width: 1150px)) {
 
+    header {
+        position: static;
+    }
     main .first-block {
         flex-flow: column wrap;
         padding: 0;
