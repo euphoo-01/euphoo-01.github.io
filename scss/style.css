@@ -9,18 +9,21 @@ footer, main .download-block .row, main .authors-block .container, main .first-b
   flex-flow: row wrap;
 }
 
-main .dev-block td, header nav ul li a, p {
+header nav ul li a, p, td {
   font-family: Roboto;
   font-weight: 400;
   font-size: 18px;
   color: rgb(215, 239, 242);
 }
 
-main .dev-block a, main .dev-block caption,
-main .dev-block th, header .burger-menu li a, h2, h1 {
+header .burger-menu li a, h2, h1, caption, th {
   font-family: Montserrat;
   font-weight: 1000;
   font-size: 48px;
+}
+
+caption, th {
+  font-size: 18px;
 }
 
 html {
@@ -28,7 +31,6 @@ html {
 }
 
 body {
-  overflow: hidden;
   width: 80%;
   margin-left: 10%;
 }
@@ -179,43 +181,10 @@ main .about-block .yellow {
 main .about-block .gray {
   color: rgb(200, 200, 200);
 }
-main .dev-block .design-img {
-  height: 50%;
-  width: 88.8888888889%;
-}
-main .dev-block table {
-  text-align: center;
-}
-main .dev-block caption,
-main .dev-block th {
-  font-size: 18px;
-}
-main .dev-block th {
-  border: 3px solid rgb(215, 239, 242);
-  border-radius: 5px;
-}
-main .dev-block td {
-  border: 3px solid rgb(215, 239, 242);
-  border-radius: 5px;
-  padding: 5px;
-}
-main .dev-block a {
-  color: rgb(215, 239, 242);
-  font-size: 18px;
-  transition: all 0.3s ease-in-out;
-}
-main .dev-block a:hover {
-  opacity: 0.7;
-}
-main .dev-block span {
-  opacity: 0.5;
-}
 main .authors-block .container {
-  perspective: 1000px;
   gap: 15px;
 }
 main .authors-block .container section {
-  background-color: rgb(215, 239, 242);
   border: 3px rgb(215, 239, 242) solid;
   border-radius: 15px;
   padding: 15px;
@@ -226,27 +195,11 @@ main .authors-block .container section {
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  color: rgb(28, 28, 28);
-  transition: all 0.2s ease-in-out;
 }
-main .authors-block .container section h2 {
-  transform: translateY(2.5rem);
-  transition: transform 0.2s ease-in-out;
-}
-main .authors-block .container section p {
-  transition: opacity 0.2s ease-in-out;
-}
-main .authors-block .container section:hover {
-  scale: 1.1;
-  background-color: rgb(28, 28, 28);
-  color: rgb(215, 239, 242);
-}
-main .authors-block .container section:hover p {
-  opacity: 1;
-  visibility: visible;
-}
-main .authors-block .container section:hover h2 {
-  transform: translateY(0rem);
+main .authors-block .container section img {
+  width: 100px;
+  border-radius: 15px;
+  border: 3px rgb(215, 239, 242) solid;
 }
 main .download-block .row {
   justify-content: center;
@@ -262,7 +215,6 @@ main .download-block .row button {
 }
 main .download-block .row button:hover {
   opacity: 0.7;
-  scale: 1.1;
 }
 main .download-block .row button:active {
   transform: scale(0.9);
