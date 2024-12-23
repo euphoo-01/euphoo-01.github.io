@@ -299,7 +299,7 @@ footer {
     flex-flow: column wrap;
     padding: 0;
   }
-  main .first-block img {
+  main .first-block a {
     transform: rotatey(0);
     width: 80%;
     margin: 10px;

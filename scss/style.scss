@@ -180,7 +180,7 @@ main {
     border-radius: 15px;
     @extend %flex-container;
 
-    background: linear-gradient(120deg, #4776e6, #8e54e9);
+    background: $accent;
     perspective: 2000px;
     margin: 0 auto;
     padding: 50px 0;
@@ -352,7 +352,7 @@ footer {
   main .first-block {
     flex-flow: column wrap;
     padding: 0;
-    img {
+    a {
       transform: rotatey(0);
       width: 80%;
       margin: 10px;
