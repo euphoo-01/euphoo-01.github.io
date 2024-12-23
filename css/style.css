@@ -147,7 +147,14 @@ header #burger-check:checked + .burger-menu {
   display: block;
 }
 
+main hr {
+  border-radius: 15px;
+  height: 3px;
+  background: rgb(215, 239, 242);
+  margin-top: 30px;
+}
 main .first-block {
+  border-radius: 15px;
   background: linear-gradient(120deg, #4776e6, #8e54e9);
   perspective: 2000px;
   margin: 0 auto;
@@ -157,14 +164,21 @@ main .first-block {
   align-content: center;
   justify-items: center;
 }
-main .first-block img {
-  width: 20%;
+main .first-block a {
+  width: 10%;
   height: auto;
   border-radius: 15px;
   transform: rotatey(-38deg);
   flex: 1 1 50%;
   margin-right: 1em;
   box-shadow: 0px 0px 0px 3px rgb(215, 239, 242);
+  transition: all 0.2s ease-in-out;
+}
+main .first-block a img {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 15px;
 }
 main .first-block .slogan {
   margin-left: 1em;
@@ -279,6 +293,7 @@ footer {
 @media ((min-width: 360px) and (max-width: 1150px)) {
   header {
     position: static;
+    box-shadow: none;
   }
   main .first-block {
     flex-flow: column wrap;
