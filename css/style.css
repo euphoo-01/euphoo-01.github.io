@@ -28,7 +28,7 @@ html {
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   width: 80%;
   margin-left: 10%;
 }
