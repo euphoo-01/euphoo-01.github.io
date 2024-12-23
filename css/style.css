@@ -188,7 +188,7 @@ main .dev-block table {
 }
 main .dev-block caption,
 main .dev-block th {
-  font-size: 18px;
+  font-size: 20px;
 }
 main .dev-block th {
   border: 3px solid rgb(215, 239, 242);
@@ -200,6 +200,8 @@ main .dev-block td {
   padding: 5px;
 }
 main .dev-block a {
+  -webkit-text-decoration: underline double;
+          text-decoration: underline double;
   color: rgb(215, 239, 242);
   font-size: 18px;
   transition: all 0.3s ease-in-out;

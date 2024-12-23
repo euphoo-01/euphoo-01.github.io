@@ -219,7 +219,7 @@ main {
     caption,
     th {
       @extend %header-text;
-      font-size: 18px;
+      font-size: 20px;
     }
 
     th {
@@ -228,14 +228,15 @@ main {
     }
 
     td {
-      border: 3px solid $text;
       @extend %paragraph-text;
+      border: 3px solid $text;
       border-radius: 5px;
       padding: 5px;
     }
     a {
-      color: $text;
       @extend %header-text;
+      text-decoration: underline double;
+      color: $text;
       font-size: 18px;
       transition: all 0.3s ease-in-out;
       &:hover {
