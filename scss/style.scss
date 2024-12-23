@@ -189,6 +189,7 @@ main {
     align-content: center;
     justify-items: center;
     a {
+      position: relative;
       width: 10%;
       height: auto;
       border-radius: 15px;
@@ -197,10 +198,11 @@ main {
       margin-left: 1em;
       box-shadow: 0px 0px 0px 3px $text;
       transition: all 0.2s ease-in-out;
+
       img {
         width: 100%;
         height: 100%;
-        box-sizing: border-box;
+
         border-radius: 15px;
       }
     }
@@ -342,28 +344,31 @@ footer {
 
 @media (min-width: 1150px) {
   main .first-block a {
+    position: relative; // Добавлено для обеспечения работы псевдоэлемента
     &::after {
+      display: flex;
       opacity: 0;
       position: absolute;
-      top: 30%;
-      left: 20%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
       content: "Скачай меня!";
       font-family: "Montserrat";
       font-weight: 1000;
       font-size: 64px;
       transition: all 0.2s ease-in-out;
       color: $black;
+      text-align: center;
     }
     &:hover {
       transform: rotatey(0);
-      transform: translateX(15rem);
+      transform: translateX(28%);
       opacity: 0.7;
       & + .slogan {
         opacity: 0;
       }
       &::after {
         opacity: 1;
-        top: 40%;
       }
     }
   }
@@ -377,28 +382,30 @@ footer {
   main .first-block {
     flex-flow: column-reverse wrap;
     padding: 0;
-    a {
-      transform: rotatey(0);
-      width: 80%;
-      margin: 10px;
+  }
+  main .first-block a {
+    position: relative; // Добавлено для обеспечения работы псевдоэлемента
+    transform: rotatey(0);
+    width: 80%;
+    margin: 10px;
+    &::after {
+      opacity: 0;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      content: "Скачай меня!";
+      text-align: center;
+      font-family: "Montserrat";
+      font-weight: 1000;
+      font-size: 64px;
+      transition: all 0.2s ease-in-out;
+      color: $black;
+    }
+    &:hover {
+      opacity: 0.7;
       &::after {
-        opacity: 0;
-        position: absolute;
-        top: 30%;
-        left: 20%;
-        content: "Скачай меня!";
-        font-family: "Montserrat";
-        font-weight: 1000;
-        font-size: 64px;
-        transition: all 0.2s ease-in-out;
-        color: $black;
-      }
-      &:hover {
-        opacity: 0.7;
-        &::after {
-          opacity: 1;
-          top: 40%;
-        }
+        opacity: 1;
       }
     }
   }
