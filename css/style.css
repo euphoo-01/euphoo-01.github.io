@@ -156,10 +156,6 @@ header #burger-check:checked + .burger-menu {
   display: block;
 }
 
-main {
-  width: 90%;
-  margin: 0 auto;
-}
 main hr {
   border-radius: 15px;
   height: 3px;
@@ -200,6 +196,10 @@ main .first-block .slogan {
   flex: 1 1 20%;
   transition: opacity 0.2s ease-in-out;
 }
+main .about-block {
+  width: 90%;
+  margin: 0 auto;
+}
 main .about-block .green {
   color: #46b96b;
 }
@@ -209,9 +209,32 @@ main .about-block .yellow {
 main .about-block .gray {
   color: rgb(108, 106, 106);
 }
-main .dev-block .design-img {
-  height: 50%;
-  width: 88.8888888889%;
+main .dev-block {
+  width: 90%;
+  margin: 0 auto;
+}
+main .dev-block .container {
+  display: flex;
+}
+main .dev-block .container p {
+  flex: 2;
+}
+main .dev-block .container .img-container {
+  width: 30%;
+  display: flex;
+  flex-flow: column;
+}
+main .dev-block .container .img-container label {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 18px;
+  color: rgb(28, 28, 28);
+  color: rgb(108, 106, 106);
+  text-align: center;
+}
+main .dev-block .container .img-container img {
+  box-sizing: border-box;
+  height: auto;
 }
 main .dev-block table {
   text-align: center;
@@ -255,6 +278,10 @@ main .dev-block span {
 main .dev-block img {
   border-radius: 15px;
 }
+main .authors-block {
+  width: 90%;
+  margin: 0 auto;
+}
 main .authors-block .container {
   display: flex;
   flex-flow: row wrap;
@@ -295,6 +322,10 @@ main .authors-block .container section:hover p {
 }
 main .authors-block .container section:hover h2 {
   transform: translateY(0rem);
+}
+main .download-block {
+  width: 90%;
+  margin: 0 auto;
 }
 main .download-block .row {
   display: flex;

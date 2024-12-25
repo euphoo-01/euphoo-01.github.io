@@ -176,8 +176,6 @@ header {
 }
 
 main {
-  width: 90%;
-  margin: 0 auto;
   hr {
     border-radius: 15px;
     height: 3px;
@@ -222,6 +220,8 @@ main {
     }
   }
   .about-block {
+    width: 90%;
+    margin: 0 auto;
     .green {
       color: #46b96b;
     }
@@ -234,9 +234,27 @@ main {
   }
 
   .dev-block {
-    .design-img {
-      height: calc(800% / 16);
-      width: calc(800% / 9);
+    width: 90%;
+    margin: 0 auto;
+    .container {
+      display: flex;
+      p {
+        flex: 2;
+      }
+      .img-container {
+        width: 30%;
+        display: flex;
+        flex-flow: column;
+        label {
+          @include paragraph-text();
+          color: rgb(108, 106, 106);
+          text-align: center;
+        }
+        img {
+          box-sizing: border-box;
+          height: auto;
+        }
+      }
     }
     table {
       text-align: center;
@@ -278,6 +296,8 @@ main {
   }
 
   .authors-block {
+    width: 90%;
+    margin: 0 auto;
     .container {
       @include flex-container;
       perspective: 1000px;
@@ -324,6 +344,8 @@ main {
   }
 
   .download-block {
+    width: 90%;
+    margin: 0 auto;
     .row {
       @include flex-container;
       justify-content: center;
