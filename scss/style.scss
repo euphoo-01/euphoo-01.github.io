@@ -377,6 +377,8 @@ footer {
   height: 100px;
 }
 
+// Стили только для настольной версии
+
 @media (min-width: 1150px) {
   main .first-block a {
     position: relative; // Добавлено для обеспечения работы псевдоэлемента
@@ -408,6 +410,8 @@ footer {
     }
   }
 }
+
+// Стили для мобильной версии
 
 @media ((min-width: 360px) and (max-width: 1150px)) {
   header {
