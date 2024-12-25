@@ -220,7 +220,7 @@ main .dev-block .container p {
   flex: 2;
 }
 main .dev-block .container .img-container {
-  width: 30%;
+  width: 500px;
   display: flex;
   flex-flow: column;
 }
@@ -397,6 +397,9 @@ footer {
     flex-flow: column-reverse wrap;
     padding: 0;
   }
+  main .first-block h1 {
+    margin-left: 1em;
+  }
   main .first-block a {
     position: relative;
     transform: rotatey(0);
@@ -422,6 +425,12 @@ footer {
   }
   main .first-block a:hover::after {
     opacity: 1;
+  }
+  main .dev-block .container {
+    flex-flow: column;
+  }
+  main .dev-block .container .img-container {
+    width: 85vw;
   }
   .horizontal-menu {
     display: none;
