@@ -349,6 +349,15 @@ main {
     .row {
       @include flex-container;
       justify-content: center;
+      align-content: center;
+      align-items: center;
+      gap: 15px;
+      img {
+        height: 75px;
+        width: 75px;
+        border-radius: 50px;
+        filter: saturate(0) brightness(.32);
+      }
       button {
         margin: 30px 0;
         width: 300px;
@@ -470,5 +479,11 @@ footer {
 
   header .burger-button {
     display: flex;
+  }
+
+  .download-block {
+    img {
+      display: none;
+    }
   }
 }
